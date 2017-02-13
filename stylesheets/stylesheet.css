@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a,
+a:visited {
+  color: blue;
+}
+
+
+
+#logoBox {
+  margin-top: 1.5em;
+  text-align: center;
+  margin-bottom: -0.5em;
+}
+
+
+#titleBox {
+  text-align: center;
+}
+
+
+#title {
+  font-size: 3.6em;
+  margin-top: 0.1em;
+  margin-bottom: 0;
+}
+
+
+
+#subtitle {
+  font-size: 1.3em;
+  text-align: center;
+  font-style: italic;
+  color: darkgray;
+  margin-bottom: 2.2em;
+}
+
+
+.buttons {
+  margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 4em;
+}
+
+
+.button {
+  margin-top: 1.7em;
+  padding: 0.5em;
+  border-radius: 1em;
+  font-weight: bold;
+  margin-right: 0.5em;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+
+
+
+.moonDeployButton {
+  display: none;
+}
+
+
+.zipButton {
+  display: none;
+}
+
+
+a.moonDeployButton,
+a.moonDeployButton:visited {
+  color: #13491b;
+  background: radial-gradient(#00ff00 0%, #ffff00 100%);
+}
+
+
+a.zipButton,
+a.zipButton:visited {
+  color: #074687;
+  background: radial-gradient(#ffb9ff 0%, #80ffff 100%);
+}
+
+a.gitHubButton,
+a.gitHubButton:visited {
+  color: #a00b0b;
+  background: radial-gradient(#ffff00 0%, #ff2121 100%);
+}
+
+
+
+#introBlock {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+  font-size: 1.4em;
+}
+
+
+
+#screenshots {
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+#screenshots img {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+  display: block;
+  max-width: 90%;
+}
+
+
+#thanksBlock {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+
+  font-size: 1.2em;
+
+  border: 1px dashed silver;
+  border-radius: 2em;
+
+  padding: 1em;
+
+  color: black;
+  background: #e3fffa;
+
+  text-align: center;
+}
+
+
+#thanksBlock a,
+#thanksBlock a:visited {
+  color: black;
+}
+
+
+#thanksBlock ul {
+  padding: 0;
+}
+
+
+#thanksBlock li {
+  font-style: italic;
+  list-style-type: none;
+}
+
+
+#facebookBox {
+  text-align: center;
+  margin-top: 3em;
+}
+
+
+#facebookButton {
+  padding: 1em;
+  background: #0044a9;
+  color: #e1edff;
+  font-size: 1em;
+}
+
+#facebookButton:hover {
+  background: #0650bf;
+}
+
+footer {
+  text-align: center;
+}
+
+
+footer hr {
+  margin-top: 3.5em;
+  margin-bottom: 1em;
+}
+
+
+footer a {
+  text-decoration: none;
+}
+
+
+li {
+  padding: 0.6em 0;
+}
+
+
+@media (max-width: 840px) {
+  #thanksBlock {
+    width: 80%;
+  }
+}
