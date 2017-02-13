@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--^
+  ===========================================================================
+  BppGame
+  ===========================================================================
+  Copyright (C) 2017 Gianluca Costa
+  ===========================================================================
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as
+  published by the Free Software Foundation, either version 3 of the
+  License, or (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public
+  License along with this program.  If not, see
+  <http://www.gnu.org/licenses/gpl-3.0.html>.
+  ===========================================================================
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <SplitPane fx:id="gameSplitPane" dividerPositions="0.5" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+            <items>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <center>
+                        <ScrollPane fx:id="frameScrollPane" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+                    </center>
+                </BorderPane>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                      <ScrollPane fx:id="galleryScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="617.0" prefWidth="395.0" />
+                  <VBox spacing="2.0">
+                     <children>
+                        <Label styleClass="explanationLabel" text="Drag an item to the square where you want to place its bottom." />
+                        <Label styleClass="explanationLabel" text="Legend: w=&lt;item size&gt; (&lt;number of items to pack&gt;)." />
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+            </items>
+        </SplitPane>
+    </center>
+    <top>
+        <FlowPane fx:id="statusBox" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER_LEFT" prefHeight="40.0">
+               <children>
+                  <Label fx:id="usedBinsPromptLabel" styleClass="promptLabel" text="Bins used:">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="usedBinsLabel" text="usedBinsLabel" />
+               </children></HBox>
+            <Separator orientation="VERTICAL" prefHeight="25.0">
+               <FlowPane.margin>
+                  <Insets left="20.0" right="20.0" />
+               </FlowPane.margin>
+            </Separator>
+                <HBox alignment="CENTER_LEFT" prefHeight="40.0">
+                    <children>
+                        <Label fx:id="blocksPromptLabel" styleClass="promptLabel" text="Blocks to insert:">
+                            <HBox.margin>
+                                <Insets right="5.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Label fx:id="blocksLabel" text="blocksLabel" />
+                    </children>
+                </HBox>
+                <Separator orientation="VERTICAL" prefHeight="25.0">
+                    <FlowPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </FlowPane.margin>
+                </Separator>
+                <HBox alignment="CENTER_LEFT" prefHeight="40.0">
+                    <children>
+                        <Label fx:id="resolutionPromptLabel" styleClass="promptLabel" text="Zoom:" />
+                        <Slider fx:id="resolutionSlider" max="200.0" prefHeight="16.0" prefWidth="119.0" value="15.0">
+                            <HBox.margin>
+                                <Insets left="5.0" right="5.0" />
+                            </HBox.margin>
+                        </Slider>
+                        <Label fx:id="resolutionLabel" text="Label" />
+                    </children>
+                </HBox>
+                <Separator orientation="VERTICAL" prefHeight="25.0">
+                    <FlowPane.margin>
+                        <Insets left="10.0" right="10.0" />
+                    </FlowPane.margin>
+                </Separator>
+                <HBox alignment="CENTER_LEFT" prefHeight="40.0" spacing="10.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#saveProblem" prefWidth="150.0" text="Save problem..." />
+                        <Button fx:id="saveSolutionButton" mnemonicParsing="false" onAction="#saveSolution" text="Save solution..." />
+                        <Button fx:id="saveSolutionAsImageButton" mnemonicParsing="false" onAction="#saveSolutionAsImage" prefHeight="26.0" prefWidth="190.0" text="Save solution as image..." />
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </HBox>
+            <Separator orientation="VERTICAL" prefHeight="25.0">
+               <FlowPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </FlowPane.margin>
+            </Separator>
+            <Button mnemonicParsing="false" onAction="#closeProblem" text="Close problem" />
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </FlowPane>
+    </top>
+</BorderPane>
