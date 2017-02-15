@@ -183,28 +183,33 @@ private class MainScene(appInfo: AppInfo, primaryStage: Stage) extends Scene {
               items = List(
                 new SampleProblemMenuItem(
                   "Very easy",
+                  4,
                   gameStage
                 ),
 
                 new SampleProblemMenuItem(
                   "Easy",
+                  7,
                   gameStage
                 ),
 
 
                 new SampleProblemMenuItem(
                   "Medium",
+                  10,
                   gameStage
                 ),
 
 
                 new SampleProblemMenuItem(
                   "Difficult",
+                  13,
                   gameStage
                 ),
 
                 new SampleProblemMenuItem(
                   "Very difficult",
+                  16,
                   gameStage
                 )
               )

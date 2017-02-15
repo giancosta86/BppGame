@@ -37,16 +37,17 @@ import scalafx.scene.control.MenuItem
   * Menu item related to a sample problem: when clicked, it starts such problem
   */
 private class SampleProblemMenuItem(
-                                     itemText: String,
+                                     problemName: String,
+                                     bestBinsCount: Int,
                                      gameStage: GameStage
                                    ) extends MenuItem {
   text =
-    itemText
+    s"${problemName} (${bestBinsCount} bins)"
 
 
   lazy val problem: Problem = {
     val problemResourceName =
-      itemText
+      problemName
         .toLowerCase
         .replaceAll(" ", "_")
 
@@ -68,7 +69,7 @@ private class SampleProblemMenuItem(
       problemReader.readBppProblem(
         initialFrameWidth = 1,
         timeLimitOption = None,
-        "BPP problem",
+        problemName,
         UUID.randomUUID()
       )
     } finally {
