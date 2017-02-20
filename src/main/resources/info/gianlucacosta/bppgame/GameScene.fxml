@@ -38,28 +38,23 @@
     <center>
         <SplitPane fx:id="gameSplitPane" dividerPositions="0.5" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
             <items>
-                <BorderPane prefHeight="200.0" prefWidth="200.0">
-                    <center>
-                        <ScrollPane fx:id="frameScrollPane" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-                    </center>
-                </BorderPane>
-            <VBox prefHeight="200.0" prefWidth="100.0">
-               <children>
-                      <ScrollPane fx:id="galleryScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="617.0" prefWidth="395.0" />
-                  <VBox maxHeight="50.0" spacing="2.0" VBox.vgrow="NEVER">
+                  <ScrollPane fx:id="frameScrollPane" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" />
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                      <ScrollPane fx:id="galleryScrollPane" fitToHeight="true" fitToWidth="true" prefHeight="617.0" prefWidth="395.0" BorderPane.alignment="CENTER" />
+               </center>
+               <bottom>
+                  <VBox spacing="5.0" BorderPane.alignment="CENTER">
                      <children>
                         <Label styleClass="explanationLabel" text="Drag an item to the square where you want to place its bottom." />
                         <Label styleClass="explanationLabel" text="Legend: w=&lt;item size&gt; (&lt;number of items to pack&gt;)." />
                      </children>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>
                   </VBox>
-               </children>
-            </VBox>
+               </bottom>
+            </BorderPane>
             </items>
         </SplitPane>
     </center>
