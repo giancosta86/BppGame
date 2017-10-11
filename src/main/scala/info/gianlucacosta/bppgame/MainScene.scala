@@ -189,7 +189,7 @@ private class MainScene(appInfo: AppInfo, primaryStage: Stage) extends Scene {
 
                 new SampleProblemMenuItem(
                   "Easy",
-                  7,
+                  8,
                   gameStage
                 ),
 
@@ -209,7 +209,7 @@ private class MainScene(appInfo: AppInfo, primaryStage: Stage) extends Scene {
 
                 new SampleProblemMenuItem(
                   "Very difficult",
-                  16,
+                  17,
                   gameStage
                 )
               )
